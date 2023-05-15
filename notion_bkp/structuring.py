@@ -246,7 +246,7 @@ def generate_urls(page_id:str, structured_notion: dict, config: dict):
             f_url = f_url / f_name / f_name
             f_url = str(f_url.resolve()) + '.html'
         structured_notion["pages"][page_id]["url"] = f_url
-        structured_notion["urls"].append(f_url)
+        # structured_notion["urls"].append(f_url)
            
     for child_id in structured_notion["pages"][page_id]["children"]:
         generate_urls(child_id, structured_notion, config)

@@ -196,18 +196,18 @@ def block_convertor(block:object,depth=0, structured_notion={}, page_id='') -> s
         outcome_block = blank() +"\n\n"
     else:
         if block_type in ["child_page", "child_database", "db_entry"]:
-            title = structured_notion['pages'][block['id']]['title']
-            url = structured_notion['pages'][block['id']]['url']
-            outcome_block = f"{title}]({url})\n\n"
-            if structured_notion['pages'][block['id']]['emoji']:
-                emoji = structured_notion['pages'][block['id']]['emoji']
-                outcome_block = f"[{emoji} {outcome_block}"
-            elif structured_notion['pages'][block['id']]['icon']:
-                icon = structured_notion['pages'][block['id']]['icon']
-                outcome_block = f"""[<span class="miniicon"> <img src="{icon}"></span> {outcome_block}"""
-            else:
-                outcome_block = f"[{outcome_block}"
-
+            # title = structured_notion['pages'][block['id']]['title']
+            # url = structured_notion['pages'][block['id']]['url']
+            # outcome_block = f"{title}]({url})\n\n"
+            # if structured_notion['pages'][block['id']]['emoji']:
+            #     emoji = structured_notion['pages'][block['id']]['emoji']
+            #     outcome_block = f"[{emoji} {outcome_block}"
+            # elif structured_notion['pages'][block['id']]['icon']:
+            #     icon = structured_notion['pages'][block['id']]['icon']
+            #     outcome_block = f"""[<span class="miniicon"> <img src="{icon}"></span> {outcome_block}"""
+            # else:
+            #     outcome_block = f"[{outcome_block}"
+            outcome_block = ""
         else:
             if block_type in block_type_map:
                 if block_type in ["embed", "video"]:
